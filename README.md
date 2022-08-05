@@ -1,64 +1,64 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Admin Panel With Sanctum API
+Tgas Magang Dari DOT Admin Panel Rest API
+Menggunakan Token Auth 
+Laravel Sanctum
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# ScreenShot Aplikasi
 
-## About Laravel
+# Login
+![Screenshot (25)](https://user-images.githubusercontent.com/109582141/182990383-6104cc5b-bd92-4ef8-9d7a-9fdef964cbca.png)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Registrasi
+![Screenshot (34)](https://user-images.githubusercontent.com/109582141/182990632-06a4fa05-19a4-4ce5-9ff9-e0985681e3c6.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# List Data
+![Screenshot (33)](https://user-images.githubusercontent.com/109582141/182990742-dbacbbf9-9409-406d-afd3-1da0c4fa9bfd.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# List User
+![Screenshot (32)](https://user-images.githubusercontent.com/109582141/182990786-c0301898-a378-4ff9-9322-77ce2957d34a.png)
 
-## Learning Laravel
+# Sanctum API With Token
+# Set Header
+![Screenshot (35)](https://user-images.githubusercontent.com/109582141/182992214-ce220790-0088-4dcf-883e-6f1fa476b4f0.png)
+# Login
+```diff
+POST /api/login
+```
+![Screenshot (36)](https://user-images.githubusercontent.com/109582141/182993757-7edf771a-6dfb-4c26-b92a-3c2dfb480d5d.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Logout
+```diff
+POST /api/logout
+```
+![Screenshot (39)](https://user-images.githubusercontent.com/109582141/182993947-47870247-a655-452f-9bf2-1484d3422a74.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# Register and get your token auth
+```diff
+POST /api/register
+```
+![Screenshot (37)](https://user-images.githubusercontent.com/109582141/182994181-89cc5a53-9d38-44b7-a880-3d70079e090c.png)
 
-## Laravel Sponsors
+# Set Auth Token
+![Screenshot (38)](https://user-images.githubusercontent.com/109582141/182996246-bdf602c1-4044-40bb-b790-0aeb6e156153.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+# If you use auth token then you can access all routes
+```diff
+# Public Routes
+POST /api/login
+POST /api/register
+# Posts
+GET /api/posts
+GET /api/posts/{id}
+GET  /api/posts/judul
+#Protected Routes
+POST /api/logout
+#Posts
+POST /api/posts
+PUT /api/posts/{id}
+DELETE /api/posts/{id}
+```
+Here i do not create a user api because i think it is the privacy of the person who uses my application
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Desain DATABASE
+![Screenshot (24)](https://user-images.githubusercontent.com/109582141/182996634-d055b1ed-774e-49e6-b976-216a0d88c3b4.png)
